@@ -41,6 +41,11 @@ header {
 }
 
 /* menu */
+.openMenu {
+  padding: 0 20px;
+  margin: 5px 0;
+  display: none;
+}
 .navigate {
   width: 250px;
   background: #f4f4f6;
@@ -48,6 +53,7 @@ header {
 .closeMenu {
   display: flex;
   justify-content: flex-end;
+  padding: 0 20px;
   margin: 5px 0;
 }
 .closeMenu svg {
@@ -75,6 +81,6 @@ header {
 .activeItem span {
   color: #fff;
 }
-.activeItem svg path{
+.activeItem svg path {
   fill: #fff;
 }

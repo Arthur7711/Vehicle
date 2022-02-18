@@ -1,6 +1,9 @@
 // menu close part
 document.getElementById("closeMenu").addEventListener("click", () => {
-  console.log("clicked");
+  document.querySelectorAll(".sp").forEach((el) => (el.style.display = "none"));
+  document.querySelector(".openMenu").style.display = "block";
+  document.querySelector(".closeMenu").display = "none";
+  document.querySelector(".navigate").style.width = "50px";
 });
 
 // menu item selecting
