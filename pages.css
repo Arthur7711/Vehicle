@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 40px;
+  background: #f4f4f6;
+  border-bottom: 2px solid #ccc;
+  display: grid;
+}
+.searchLab {
+  position: relative;
+}
+.searchLab input {
+  width: 650px;
+  height: 43px;
+  border: none;
+  background: #f4f4f6;
+  border: 1px solid #d9d9dd;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding-left: 50px;
+}
+.searchLab svg {
+  position: absolute;
+  top: -2px;
+  left: 10px;
+}
