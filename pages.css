@@ -75,6 +75,6 @@ header {
 .activeItem span {
   color: #fff;
 }
-.activeItem svg {
+.activeItem svg path{
   fill: #fff;
 }
