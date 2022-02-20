@@ -2,7 +2,7 @@
 document.getElementById("closeMenu").addEventListener("click", () => {
   document.querySelectorAll(".sp").forEach((el) => (el.style.display = "none"));
   document.querySelector(".openMenu").style.display = "block";
-  document.querySelector(".closeMenu").display = "none";
+  document.querySelector(".closeMenu").style.display = "none";
   document.querySelector(".navigate").style.width = "50px";
 });
 

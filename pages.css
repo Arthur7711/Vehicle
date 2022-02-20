@@ -43,7 +43,6 @@ header {
 /* menu */
 .openMenu {
   padding: 0 20px;
-  margin: 5px 0;
   display: none;
 }
 .navigate {
@@ -53,8 +52,8 @@ header {
 .closeMenu {
   display: flex;
   justify-content: flex-end;
-  padding: 0 20px;
-  margin: 5px 0;
+  padding: 10px 20px;
+  /* margin: 5px 0; */
 }
 .closeMenu svg {
   cursor: pointer;
