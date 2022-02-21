@@ -58,8 +58,7 @@ header {
 .closeMenu {
   display: flex;
   justify-content: flex-end;
-  padding: 10px 20px;
-  /* margin: 5px 0; */
+  padding: 10px 0;
 }
 .closeMenu svg {
   cursor: pointer;
@@ -151,12 +150,20 @@ header {
   cursor: pointer;
 }
 .itemContent {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   padding: 25px 0;
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-areas: "a c b";
+  place-items: center;
+}
+.firstSVG {
+  grid-area: a;
+}
+.secSVG {
+  grid-area: b;
 }
 .itemContent .number {
+  grid-area: c;
   width: 88px;
   height: 88px;
   background: #eeeeee;
