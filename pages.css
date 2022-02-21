@@ -175,3 +175,34 @@ header {
   font-size: 36px;
   color: #010101;
 }
+
+/* crashWallboard items */
+.crashItem {
+  width: 380px;
+  border-radius: 4px;
+}
+.topMain {
+  border-radius: 4px;
+  height: 80px;
+  background: #ffa724;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+.crashP {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #010101;
+}
+.crashIconArea {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.crashIconArea svg {
+  cursor: pointer;
+}
