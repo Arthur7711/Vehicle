@@ -39,7 +39,10 @@ header {
 .topMenu > svg {
   margin: 0 10px;
 }
-
+.section {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
 /* menu */
 .openMenu {
   padding: 10px 0;
@@ -85,4 +88,83 @@ header {
 }
 .activeItem svg path {
   fill: #fff;
+}
+/* main */
+.main {
+  padding: 20px 35px;
+}
+.topSection {
+  display: flex;
+  justify-content: space-between;
+}
+.topSection p {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+  color: #010101;
+}
+#selectOption {
+  width: 298px;
+  height: 43px;
+  background: #f4f4f6;
+  border: 1px solid #d9d9dd;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+.items {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.item {
+  background: #fffbf4;
+  border: 1px solid #ffa724;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(115, 115, 115, 0.25);
+  border-radius: 5px;
+  width: 380px;
+}
+.itemTitle {
+  height: 60px;
+  background: #ffa724;
+  border-radius: 4px 4px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.titleAreas {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  gap: 20px;
+}
+.titleAreas span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #010101;
+}
+.titleAreas svg {
+  cursor: pointer;
+}
+.itemContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 0;
+}
+.itemContent .number {
+  width: 88px;
+  height: 88px;
+  background: #eeeeee;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 36px;
+  color: #010101;
 }
