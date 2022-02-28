@@ -1,7 +1,3 @@
-// // // creating all items
-// Urgent- red
-// Caution - orange
-// Normal - green
 import { cardsforuser } from "./ajaxdata.js";
 import { carddata } from "./ajaxdata.js";
 import { carddatadetails } from "./ajaxdata.js";
@@ -71,7 +67,6 @@ arr.map((el) => {
   p.classList.add("number");
 
   // building part in home page
-  // function asyncElemsAdding(arr) {}
   itemContent.innerHTML = `<svg class="firstSVG" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 47.5V12.5" stroke="#F53737" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M47.5 30L30 12.5L12.5 30" stroke="#F53737" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="secSVG" width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1.6 0H0V24H24V4C23.9999 3.83053 23.9459 3.66549 23.8459 3.52867C23.7459 3.39184 23.6051 3.2903 23.4436 3.23869C23.2822 3.18708 23.1086 3.18806 22.9478 3.2415C22.7869 3.29493 22.6472 3.39805 22.5488 3.536L15.184 13.8448L11.04 8.32C10.9632 8.21768 10.863 8.13528 10.7477 8.0797C10.6325 8.02413 10.5056 7.997 10.3777 8.00061C10.2498 8.00421 10.1246 8.03844 10.0127 8.10042C9.90076 8.1624 9.80533 8.25032 9.7344 8.3568L1.6 20.5584V0Z" fill="#646464"/></svg>`;
   p.textContent = `${el.count}`;
   itemContent.append(p);
@@ -93,7 +88,6 @@ arr.map((el) => {
 
 // hover part
 const infoBtn = document.querySelectorAll(".infoBtn");
-console.log(infoBtn);
 infoBtn.forEach((elem) => {
   elem.addEventListener("mouseover", () =>
     elem.parentNode.parentNode.parentNode.parentNode.childNodes[0].classList.add(
