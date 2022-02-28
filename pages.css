@@ -118,7 +118,6 @@ header {
 }
 .item {
   background: #fffbf4;
-  border: 1px solid #ffa724;
   box-sizing: border-box;
   box-shadow: 0px 4px 20px rgba(115, 115, 115, 0.25);
   border-radius: 5px;
@@ -130,11 +129,20 @@ header {
   display: flex;
   justify-content: space-between;
 }
+.bgInfoItem {
+  border: 1px solid #82bc40;
+}
 .bgInfo {
   background: #82bc40;
 }
+.bgWarningItem {
+  border: 1px solid #ffa724;
+}
 .bgWarning {
   background: #ffa724;
+}
+.bgDangerItem {
+  border: 1px solid #cf1317;
 }
 .bgDanger {
   background: #cf1317;

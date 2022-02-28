@@ -21,6 +21,19 @@ arr.map((el) => {
 
   let child = document.createElement("div");
   child.classList.add("item");
+  switch (el.status) {
+    case "bg-info":
+      child.classList.add("bgInfoItem");
+      break;
+    case "bg-warning":
+      child.classList.add("bgWarningItem");
+      break;
+    case "bg-danger":
+      child.classList.add("bgDangerItem");
+      break;
+    default:
+      break;
+  }
 
   let itemTitle = document.createElement("div");
   itemTitle.classList.add("itemTitle");
