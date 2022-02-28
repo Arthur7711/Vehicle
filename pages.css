@@ -116,6 +116,22 @@ header {
   gap: 20px;
   flex-wrap: wrap;
 }
+.infoItemArea {
+  position: relative;
+}
+.infoHere {
+  background-color: rgb(75, 75, 75);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+.hoveriseInfoHere {
+  display: block;
+}
 .item {
   background: #fffbf4;
   box-sizing: border-box;
