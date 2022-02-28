@@ -126,10 +126,18 @@ header {
 }
 .itemTitle {
   height: 60px;
-  background: #ffa724;
   border-radius: 4px 4px 0px 0px;
   display: flex;
   justify-content: space-between;
+}
+.bgInfo {
+  background: #82bc40;
+}
+.bgWarning {
+  background: #ffa724;
+}
+.bgDanger {
+  background: #cf1317;
 }
 .titleAreas {
   display: flex;
@@ -141,7 +149,7 @@ header {
 .titleAreas span {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   text-transform: capitalize;
   color: #010101;
@@ -174,6 +182,7 @@ header {
   font-weight: bold;
   font-size: 36px;
   color: #010101;
+  cursor: pointer;
 }
 
 /* crashWallboard items */
