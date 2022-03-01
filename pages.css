@@ -194,6 +194,13 @@ header {
 .secSVG {
   grid-area: b;
 }
+.contentMain {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .itemContent .number {
   grid-area: c;
   width: 88px;
@@ -208,7 +215,19 @@ header {
   color: #010101;
   cursor: pointer;
 }
-
+.smallP {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  background: #ff1133;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* crashWallboard items */
 .crashItem {
   width: 380px;
