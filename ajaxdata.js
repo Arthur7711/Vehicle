@@ -101,6 +101,7 @@ export let carddata = {
 };
 
 export let carddatadetails = {
+  // "IMEI", "Label", "Last Seen", "View Vehicle"
   DeviceList: {
     title: "Vehicles in fleet",
     headings: ["IMEI", "Label", "Last Seen", "View Vehicle"],
@@ -571,6 +572,7 @@ export let carddatadetails = {
     list: "DeviceList",
     defaultSortColumn: 2,
   },
+  // "IMEI", "Label", "View Vehicle"
   DeviceMap: {
     title: "Vehicle Map",
     headings: ["IMEI", "Label", "View Vehicle"],
@@ -1042,6 +1044,7 @@ export let carddatadetails = {
       { lat: 34.0149, lng: -118.4718 },
     ],
   },
+  // "IMEI", "Label", "Hours Missing", "View Vehicle"
   OfflineVehicles: {
     title: "Offline Vehicles",
     headings: ["IMEI", "Label", "Hours Missing", "View Vehicle"],
@@ -1049,6 +1052,7 @@ export let carddatadetails = {
     list: "OfflineVehicles",
     defaultSortColumn: 2,
   },
+  // "IMEI", "Label", "Since", "View Vehicle"
   BadBatteries: {
     title: "Bad Batteries",
     headings: ["IMEI", "Label", "Since", "View Vehicle"],
@@ -1064,6 +1068,7 @@ export let carddatadetails = {
     list: "BadBatteries",
     defaultSortColumn: 2,
   },
+  // "IMEI",  "Label", "Last Charge", "Hours Since Charge", "View Vehicle",
   VehiclesNotCharged: {
     title: "Not Charged",
     headings: [
@@ -1286,6 +1291,7 @@ export let carddatadetails = {
     list: "VehiclesNotCharged",
     defaultSortColumn: 2,
   },
+  // "IMEI", "Label", "Date", "G-horiz", "G-verti", "View Impact"
   VehicleImpactExtreme: {
     title: "Extreme Impacts",
     headings: ["IMEI", "Label", "Date", "G-horiz", "G-verti", "View Impact"],
@@ -1348,6 +1354,7 @@ export let carddatadetails = {
     list: "VehicleImpactExtreme",
     defaultSortColumn: 3,
   },
+  // "IMEI", "Label", "Date", "G-horiz", "G-verti", "View Impact"
   VehicleImpactAbnormal: {
     title: "Abnormal Impacts",
     headings: ["IMEI", "Label", "Date", "G-horiz", "G-verti", "View Impact"],
@@ -2301,6 +2308,7 @@ export let carddatadetails = {
     list: "VehicleImpactAbnormal",
     defaultSortColumn: 3,
   },
+  // "IMEI", "Label", "Duration (hrs)", "Distance (mi)","View Vehicle",
   FleetUsageLong: {
     title: "Vehicle Utilization (most hours)",
     headings: [
@@ -2395,6 +2403,7 @@ export let carddatadetails = {
     list: "FleetUsageLong",
     defaultSortColumn: 2,
   },
+  // "IMEI", "Label", "Duration (hrs)", "Distance (mi)", "View Vehicle",
   FleetUsageShort: {
     title: "20 Least utilized (hours) vehicles in a week",
     headings: [

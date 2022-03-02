@@ -258,3 +258,10 @@ header {
 .crashIconArea svg {
   cursor: pointer;
 }
+
+/* table styles */
+.tableStyles tbody tr td {
+  border: 1px solid black;
+  padding: 5px;
+}
+/* table styles end */

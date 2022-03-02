@@ -3,12 +3,22 @@ import { carddata } from "./ajaxdata.js";
 import { carddatadetails } from "./ajaxdata.js";
 
 const arr = [];
-(function gettingKeys() {
+(function () {
   for (const key in carddata) {
     arr.push(carddata[key]);
   }
   return arr;
 })();
+
+const dataInfo = [];
+(function () {
+  for (const key in carddatadetails) {
+    dataInfo.push(carddatadetails[key]);
+  }
+  return dataInfo;
+})();
+
+// console.log(dataInfo, "sdcdsv");
 
 // creating consts area
 arr.map((el) => {
@@ -154,6 +164,71 @@ arr.map((el) => {
   mainItems.appendChild(infoItemArea);
 });
 
+dataInfo.map((el, i) => {
+  let table = document.createElement("table");
+  table.setAttribute("id", `item${i}`);
+  table.classList.add("display", "table", "table-striped", "table-bordered");
+  table.style.width = "600px";
+  forCreatingTable.append(table);
+  console.log(el, "eeeeeeeeee");
+
+  let columns = [];
+  el.headings.map((elem) => {
+    columns.push({ title: elem, data: elem });
+  });
+  // var jsonData = {
+  //   data: [
+  //     {
+  //       One: "Row 1 - Field 1",
+  //       Two: "Row 1 - Field 2",
+  //       Three: "Row 1 - Field 3",
+  //     },
+  //     {
+  //       One: "Row 2 - Field 1",
+  //       Two: "Row 2 - Field 2",
+  //       Three: "Row 2 - Field 3",
+  //     },
+  //   ],
+  //   columns: [
+  //     {
+  //       title: "One",
+  //       data: "One",
+  //     },
+  //     {
+  //       title: "Two",
+  //       data: "Two",
+  //     },
+  //     {
+  //       title: "Three",
+  //       data: "Three",
+  //     },
+  //   ],
+  // };
+  console.log(el.data, "dasdasds");
+  $(document).ready(function () {
+    $(`#item${i}`).DataTable({
+      data: el.data,
+      columns: columns,
+      searching: false,
+    });
+  });
+
+  // let thead = document.createElement("thead");
+
+  // let tbody = document.createElement("tbody");
+
+  // let tr = document.createElement("tr");
+
+  // let th = document.createElement("th");
+
+  // let td = document.createElement("td");
+
+  // el.headings.forEach((el) => {
+  //   th.textContent = `${el}`;
+  //   thead.append(th);
+  // });
+});
+
 // hover part
 const infoBtn = document.querySelectorAll(".infoBtn");
 infoBtn.forEach((elem) => {
@@ -168,3 +243,5 @@ infoBtn.forEach((elem) => {
     );
   });
 });
+
+// table part
