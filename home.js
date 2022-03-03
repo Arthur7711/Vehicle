@@ -21,7 +21,7 @@ const dataInfo = [];
 // console.log(dataInfo, "sdcdsv");
 
 // creating consts area
-arr.map((el) => {
+arr.map((el, i) => {
   let mainItems = document.getElementById("items");
 
   let infoItemArea = document.createElement("div");
@@ -162,72 +162,57 @@ arr.map((el) => {
   infoItemArea.append(infoHere, child);
 
   mainItems.appendChild(infoItemArea);
+  // adding click on number
+  window.addEventListener("click", () => {
+    setTimeout(() => {
+      document.getElementById(`item${i}_wrapper`).style.display = "none";
+    }, 3);
+  });
+  p.addEventListener("click", (e) => {
+    console.log(e);
+    setTimeout(() => {
+      document.getElementById(`item${i}_wrapper`).style.display = "block";
+    }, 5);
+    console.log(i);
+  });
 });
 
+// table part
 dataInfo.map((el, i) => {
   let table = document.createElement("table");
   table.setAttribute("id", `item${i}`);
   table.classList.add("display", "table", "table-striped", "table-bordered");
   table.style.width = "600px";
   forCreatingTable.append(table);
-  console.log(el, "eeeeeeeeee");
-
   let columns = [];
   el.headings.map((elem) => {
     columns.push({ title: elem, data: elem });
   });
-  // var jsonData = {
-  //   data: [
-  //     {
-  //       One: "Row 1 - Field 1",
-  //       Two: "Row 1 - Field 2",
-  //       Three: "Row 1 - Field 3",
-  //     },
-  //     {
-  //       One: "Row 2 - Field 1",
-  //       Two: "Row 2 - Field 2",
-  //       Three: "Row 2 - Field 3",
-  //     },
-  //   ],
-  //   columns: [
-  //     {
-  //       title: "One",
-  //       data: "One",
-  //     },
-  //     {
-  //       title: "Two",
-  //       data: "Two",
-  //     },
-  //     {
-  //       title: "Three",
-  //       data: "Three",
-  //     },
-  //   ],
-  // };
-  console.log(el.data, "dasdasds");
+
   $(document).ready(function () {
     $(`#item${i}`).DataTable({
       data: el.data,
       columns: columns,
       searching: false,
+      // lengthChange: false
     });
+    $(`.item${i}_wrapper`).css("background-color", "Orange");
   });
-
-  // let thead = document.createElement("thead");
-
-  // let tbody = document.createElement("tbody");
-
-  // let tr = document.createElement("tr");
-
-  // let th = document.createElement("th");
-
-  // let td = document.createElement("td");
-
-  // el.headings.forEach((el) => {
-  //   th.textContent = `${el}`;
-  //   thead.append(th);
-  // });
 });
+
+setTimeout(() => {
+  let mainTable = document.querySelectorAll(".dataTables_wrapper");
+  mainTable?.forEach((el) => {
+    el.style.position = "absolute";
+    el.style.top = 100;
+    el.style.left = "30%";
+    el.style.zIndex = 100;
+    el.style.backgroun = "#ccc";
+    // el.style.opacity = "1";
+    el.style.display = "none";
+  });
+  console.log(mainTable);
+}, 2);
 
 // hover part
 const infoBtn = document.querySelectorAll(".infoBtn");
@@ -243,5 +228,3 @@ infoBtn.forEach((elem) => {
     );
   });
 });
-
-// table part

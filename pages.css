@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +33,7 @@ header {
 }
 .searchLab svg {
   position: absolute;
-  top: -2px;
+  top: 10px;
   left: 10px;
 }
 .topMenu > svg {
