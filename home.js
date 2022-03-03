@@ -18,8 +18,6 @@ const dataInfo = [];
   return dataInfo;
 })();
 
-// console.log(dataInfo, "sdcdsv");
-
 // creating consts area
 arr.map((el, i) => {
   let mainItems = document.getElementById("items");
@@ -163,26 +161,20 @@ arr.map((el, i) => {
 
   mainItems.appendChild(infoItemArea);
   // adding click on number
-  window.addEventListener("click", () => {
-    setTimeout(() => {
-      document.getElementById(`item${i}_wrapper`).style.display = "none";
-    }, 3);
-  });
   p.addEventListener("click", (e) => {
-    console.log(e);
     setTimeout(() => {
       document.getElementById(`item${i}_wrapper`).style.display = "block";
     }, 5);
-    console.log(i);
   });
 });
 
 // table part
+const forCreatingTable = document.getElementById("forCReatingTableHere");
 dataInfo.map((el, i) => {
   let table = document.createElement("table");
   table.setAttribute("id", `item${i}`);
-  table.classList.add("display", "table", "table-striped", "table-bordered");
-  table.style.width = "600px";
+  table.classList.add("myDataTable");
+  table.style.maxWidth = "1200px";
   forCreatingTable.append(table);
   let columns = [];
   el.headings.map((elem) => {
@@ -196,25 +188,37 @@ dataInfo.map((el, i) => {
       searching: false,
       // lengthChange: false
     });
-    $(`.item${i}_wrapper`).css("background-color", "Orange");
+
+    $(`#item${i}`).parent().css("background-color", "#ccc");
   });
 });
 
 setTimeout(() => {
   let mainTable = document.querySelectorAll(".dataTables_wrapper");
-  mainTable?.forEach((el) => {
+  mainTable?.forEach((el, i) => {
     el.style.position = "absolute";
     el.style.top = 100;
     el.style.left = "30%";
     el.style.zIndex = 100;
     el.style.backgroun = "#ccc";
-    // el.style.opacity = "1";
     el.style.display = "none";
+    let forCloseDiv = document.createElement("div");
+    forCloseDiv.classList.add("forCloseDiv");
+    let closeBtn = document.createElement("button");
+    closeBtn.textContent = "Close";
+    closeBtn.classList.add("closeBtn");
+    forCloseDiv.append(closeBtn);
+    el.append(forCloseDiv);
+
+    //window close function
+    closeBtn.addEventListener("click", () => {
+      setTimeout(() => {
+        document.getElementById(`item${i}_wrapper`).style.display = "none";
+      }, 3);
+    });
   });
-  console.log(mainTable);
 }, 2);
 
-// hover part
 const infoBtn = document.querySelectorAll(".infoBtn");
 infoBtn.forEach((elem) => {
   elem.addEventListener("mouseover", () =>
