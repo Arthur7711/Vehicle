@@ -232,3 +232,63 @@ infoBtn.forEach((elem) => {
     );
   });
 });
+
+// creating map area
+// let map = null;
+// let allMarkers = [];
+// function DisplayModalMap(item) {
+//   let ajaxdata = carddatadetails[item];
+
+//   let html = $("#template-card-map").html();
+//   let output = Mustache.render(html, ajaxdata);
+//   $("body").append(output);
+//   try {
+//     map = new google.maps.Map(document.getElementById("map-" + item), {});
+//     let i = 0;
+//     //var markers = [];//some array
+//     bounds = new google.maps.LatLngBounds();
+//     ajaxdata.locations.forEach(function (position) {
+//       if (position.lat == -90 && position.lng == 0) return;
+
+//       let stringTitle = "tit";
+//       if (ajaxdata.data[i].Label == null || ajaxdata.data[i].length == 0)
+//         stringTitle = ajaxdata.data[i].IMEI;
+//       else
+//         stringTitle =
+//           ajaxdata.data[i].Label + " (" + ajaxdata.data[i].IMEI + ")";
+
+//       const myLatLng = { lat: position.lat, lng: position.lng };
+//       //console.log(i,position.lat, position.lng);
+//       bounds.extend(myLatLng);
+
+//       let marker = new google.maps.Marker({
+//         position: myLatLng,
+//         map,
+//         title: stringTitle,
+//       });
+//       allMarkers.push(marker);
+
+//       let infowindowtemplate = $("#template-card-map-infowindow").html();
+//       let infowindowcontent = Mustache.render(
+//         infowindowtemplate,
+//         ajaxdata.data[i]
+//       );
+
+//       let infowindow = new google.maps.InfoWindow({
+//         content: infowindowcontent,
+//         maxWidth: 200,
+//       });
+//       google.maps.event.addListener(marker, "click", function () {
+//         infowindow.open(map, marker);
+//       });
+//       i++;
+//     });
+//     $("#hidden-" + item).modal("show");
+//     $("#hidden-" + item).on("shown.bs.modal", function () {
+//       map.fitBounds(bounds);
+//     });
+//   } catch (exception) {
+//     //display_alert("Popup Error", "Failed to load tabular data");
+//     console.log(exception);
+//   }
+// }

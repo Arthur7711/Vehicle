@@ -285,6 +285,9 @@
   margin-top: 15px;
   font-size: 18px;
 }
+.dataTables_length {
+  margin: 10px 20px;
+}
 .paging_simple_numbers {
   display: flex;
   justify-content: space-between;
