@@ -185,11 +185,12 @@ dataInfo.map((el, i) => {
     $(`#item${i}`).DataTable({
       data: el.data,
       columns: columns,
-      searching: false,
+      // searching: false,
       // lengthChange: false
     });
 
-    $(`#item${i}`).parent().css("background-color", "#ccc");
+    $(`#item${i}`).parent().css("background-color", "#fff");
+    $(`#item${i}`).parent().css("border", "2px solid #ccc");
   });
 });
 
@@ -200,7 +201,7 @@ setTimeout(() => {
     el.style.top = 100;
     el.style.left = "30%";
     el.style.zIndex = 100;
-    el.style.backgroun = "#ccc";
+    el.style.backgroun = "#fff";
     el.style.display = "none";
     let forCloseDiv = document.createElement("div");
     forCloseDiv.classList.add("forCloseDiv");
